@@ -41,7 +41,6 @@
     "name-that-llm"
   ],
   "model_sources": [
-    "metaresearch/llama-3.1/Transformers/8b/2",
     "qwen-lm/qwen-3/Transformers/4b-base/1",
     "qwen-lm/qwen-3/Transformers/8b/1",
     "qwen-lm/qwen-3/Transformers/8b-base/1",
