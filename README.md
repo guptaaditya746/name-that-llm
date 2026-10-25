@@ -20,6 +20,7 @@ The notebook runs with internet disabled. Its Kaggle inputs are the `name-that-l
 
 | Candidate | Kaggle version | State |
 | --- | --- | --- |
+| Curated-pool TF-IDF + linear SVC | `name-that-llm-baseline/6` | Five-fold grouped balanced accuracy: **0.4282**, best `C=0.05`; not submitted |
 | DeBERTa + curated corpus | `name-that-llm-baseline/9` | Notebook completed; submission `57635648` pending scoring when last checked |
 | Public ensemble reproduction | `name-that-llm-public-ensemble/1` | Running real inference on Kaggle; not submitted yet |
 
