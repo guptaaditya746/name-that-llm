@@ -1,0 +1,41 @@
+# Data
+data/
+*.csv
+*.parquet
+
+# Model artifacts
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.bin
+
+# Outputs
+submission.csv
+working/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
