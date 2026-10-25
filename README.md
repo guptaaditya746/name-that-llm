@@ -12,6 +12,8 @@ The [official evaluation](https://www.kaggle.com/competitions/name-that-llm/over
 
 Version 2 tests quarter-strength final probability balancing. A separate Kaggle CPU [OOF calibration audit](kaggle/calibration-audit/RESULTS.md) found that full balancing can reduce balanced accuracy when class counts differ. The audit validates one LoRA component; the full ensemble candidate still needs official scoring. Its script and Kaggle metadata are in `kaggle/calibration-audit/`.
 
+A separate candidate in [`kaggle/fold-ensemble/`](kaggle/fold-ensemble/) reproduces [Dhruv Tibarewal's public `nlm-v27`](https://www.kaggle.com/code/dhruvtibarewal/nlm-v27), retaining its original credits. It uses newer fold-averaged Qwen and Llama adapters. It appeared first in Kaggle's score-descending public notebook list when selected; its exact upstream score was not exposed by the API. Its original public-sample smoke mode is retained, so sample completion will not prove every hidden inference stage. This candidate has not been submitted.
+
 ## Earlier experiment
 
 `improved_baseline.ipynb` fine-tunes Kaggle's public DeBERTa-v3-base checkpoint on the official training data and the public, route-filtered [NTL Curated Pool](https://www.kaggle.com/datasets/ankiteshtiwari/ntl-curated-pool-routed). It writes `/kaggle/working/submission.parquet` for the code competition.
@@ -28,5 +30,6 @@ The notebook runs with internet disabled. Its Kaggle inputs are the `name-that-l
 | DeBERTa + curated corpus | `name-that-llm-baseline/9` | Notebook completed; submission `57635648` pending scoring when last checked |
 | Public ensemble reproduction | `name-that-llm-public-ensemble/1` | Full inference and output checks completed in 1,681 seconds on Kaggle's two T4s; submission `57636572` pending scoring |
 | Quarter-strength final balancing | `name-that-llm-public-ensemble/2` | Public-sample inference and output checks completed in 837 seconds on Kaggle's two T4s; submission `57637069` pending scoring |
+| Public fold-averaged candidate | `name-that-llm-fold-ensemble/1` | Public-sample run started on Kaggle; not submitted |
 
 The target remains a verified top-five leaderboard position. No candidate in this repository has established that result yet.
