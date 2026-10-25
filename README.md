@@ -27,6 +27,6 @@ The notebook runs with internet disabled. Its Kaggle inputs are the `name-that-l
 | Curated-pool TF-IDF + linear SVC | `name-that-llm-baseline/6` | Five-fold grouped balanced accuracy: **0.4282**, best `C=0.05`; not submitted |
 | DeBERTa + curated corpus | `name-that-llm-baseline/9` | Notebook completed; submission `57635648` pending scoring when last checked |
 | Public ensemble reproduction | `name-that-llm-public-ensemble/1` | Full inference and output checks completed in 1,681 seconds on Kaggle's two T4s; submission `57636572` pending scoring |
-| Quarter-strength final balancing | `name-that-llm-public-ensemble/2` | Running real inference on Kaggle; not submitted yet |
+| Quarter-strength final balancing | `name-that-llm-public-ensemble/2` | Public-sample inference and output checks completed in 837 seconds on Kaggle's two T4s; submission `57637069` pending scoring |
 
 The target remains a verified top-five leaderboard position. No candidate in this repository has established that result yet.
