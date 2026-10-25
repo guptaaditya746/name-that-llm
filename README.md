@@ -8,6 +8,8 @@ The current stronger candidate is [`kaggle/ensemble/ensemble.ipynb`](kaggle/ense
 
 The ensemble attaches public pretrained LoRA checkpoints, encoder heads, style classifiers, and Qwen weights directly on Kaggle. Its public-sample shortcut is disabled to exercise actual inference. Run it with the adjacent `kernel-metadata.json`; internet stays disabled. [Kaggle run](https://www.kaggle.com/code/adi4r86/name-that-llm-public-ensemble).
 
+The [official evaluation](https://www.kaggle.com/competitions/name-that-llm/overview/evaluation) reruns submitted notebooks on approximately 4,000 hidden passages. The completed three-row public run verifies model loading and output checks, not hidden-test runtime or leaderboard accuracy. Test class counts are unequal, and the public/private mixes differ.
+
 Version 2 tests quarter-strength final probability balancing. A separate Kaggle CPU [OOF calibration audit](kaggle/calibration-audit/RESULTS.md) found that full balancing can reduce balanced accuracy when class counts differ. The audit validates one LoRA component; the full ensemble candidate still needs official scoring. Its script and Kaggle metadata are in `kaggle/calibration-audit/`.
 
 ## Earlier experiment
