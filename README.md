@@ -8,6 +8,8 @@ The current stronger candidate is [`kaggle/ensemble/ensemble.ipynb`](kaggle/ense
 
 The ensemble attaches public pretrained LoRA checkpoints, encoder heads, style classifiers, and Qwen weights directly on Kaggle. Its public-sample shortcut is disabled to exercise actual inference. Run it with the adjacent `kernel-metadata.json`; internet stays disabled. [Kaggle run](https://www.kaggle.com/code/adi4r86/name-that-llm-public-ensemble).
 
+Version 2 tests quarter-strength final probability balancing. A separate Kaggle CPU [OOF calibration audit](kaggle/calibration-audit/RESULTS.md) found that full balancing can reduce balanced accuracy when class counts differ. The audit validates one LoRA component; the full ensemble candidate still needs official scoring. Its script and Kaggle metadata are in `kaggle/calibration-audit/`.
+
 ## Earlier experiment
 
 `improved_baseline.ipynb` fine-tunes Kaggle's public DeBERTa-v3-base checkpoint on the official training data and the public, route-filtered [NTL Curated Pool](https://www.kaggle.com/datasets/ankiteshtiwari/ntl-curated-pool-routed). It writes `/kaggle/working/submission.parquet` for the code competition.
@@ -23,5 +25,6 @@ The notebook runs with internet disabled. Its Kaggle inputs are the `name-that-l
 | Curated-pool TF-IDF + linear SVC | `name-that-llm-baseline/6` | Five-fold grouped balanced accuracy: **0.4282**, best `C=0.05`; not submitted |
 | DeBERTa + curated corpus | `name-that-llm-baseline/9` | Notebook completed; submission `57635648` pending scoring when last checked |
 | Public ensemble reproduction | `name-that-llm-public-ensemble/1` | Full inference and output checks completed in 1,681 seconds on Kaggle's two T4s; submission `57636572` pending scoring |
+| Quarter-strength final balancing | `name-that-llm-public-ensemble/2` | Running real inference on Kaggle; not submitted yet |
 
 The target remains a verified top-five leaderboard position. No candidate in this repository has established that result yet.

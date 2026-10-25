@@ -1,0 +1,14 @@
+{
+  "id": "adi4r86/name-that-llm-calibration-audit",
+  "title": "Name That LLM Calibration Audit",
+  "code_file": "audit.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "competition_sources": ["name-that-llm"],
+  "kernel_sources": ["lucasboesen/name-that-llm-train-lora24-s7"],
+  "dataset_sources": [],
+  "model_sources": []
+}
