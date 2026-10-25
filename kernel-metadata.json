@@ -1,0 +1,26 @@
+{
+  "id": "adi4r86/name-that-llm-baseline",
+  "title": "Name That LLM Baseline",
+  "code_file": "improved_baseline.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [
+    "ankiteshtiwari/ntl-curated-pool-routed"
+  ],
+  "competition_sources": [
+    "name-that-llm"
+  ],
+  "keywords": [
+    "nlp",
+    "classification"
+  ],
+  "enable_tpu": "false",
+  "machine_shape": "",
+  "kernel_sources": [],
+  "model_sources": [
+    "gauripatil2299/deberta-v3-base/Transformers/default/1"
+  ]
+}
